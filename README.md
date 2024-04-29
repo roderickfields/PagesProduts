@@ -1,48 +1,20 @@
-```
-# EcomSite
+### Item Templates
 
-EcomSite is an e-commerce website project built for the purpose of Assignment 2.
+This repository contains the code for creating pages that utilize our database to display product data in accordance with the design templates provided during the Midterm assessment.
 
-## Project Structure
+#### Purpose
+The purpose of this project is to implement the design templates into functional web pages that showcase product information retrieved from a database.
 
-The project structure is organized as follows:
+#### Tools Used
+- Sublime Text: Used for coding and editing HTML, CSS, and PHP files.
+- GitHub: Used for version control and collaboration.
+- Web host: Used for hosting the project online.
 
-```
-EcomSite/
-│
-├── parts/
-│   ├── header.php
-│   ├── footer.php
-│   └── navigation.php
-│
-├── pages/
-│   ├── index.php
-│   ├── shop.php
-│   ├── product.php
-│   ├── cart.php
-│   ├── checkout.php
-│   └── about.php
-│
-├── css/
-│   └── styles.css
-│
-└── README.md
-```
+#### Assignment Details
+- **Instructions:** Follow the instructions provided in the assignment prompt to create list, item, and cart pages based on the design templates.
+- **Due Date:** The assignment is due by the end of this module.
 
-- `parts/`: Contains shared parts files such as header, footer, and navigation.
-- `pages/`: Contains PHP files for each page of the e-commerce site.
-- `css/`: Contains the CSS styles for the site.
-- `README.md`: Contains information about the project.
-
-## Usage
-
-To run the project, simply deploy the files to a web server with PHP support. Access the `index.php` file to navigate through the site.
-
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions for improvement, feel free to open an issue or create a pull request.
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-```
+#### Submission
+1. Commit and push your work to GitHub.
+2. Submit a link to your GitHub repository.
+3. Submit a link to your project index, where the implemented pages can be viewed.
