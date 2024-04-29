@@ -1,8 +1,24 @@
-<?php include 'parts/header.php'; ?>
-<?php include 'conn.php'; ?>
+<?php 
+session_start();
+include 'parts/header.php'; 
+include 'conn.php'; 
+
+if(isset($_POST['add_to_cart'])) {
+    $product_id = $_POST['product_id'];
+    
+    // Check if the product is already in the cart
+    if(!in_array($product_id, $_SESSION['cart'])) {
+        // Add product to session cart array
+        $_SESSION['cart'][] = $product_id;
+        echo '<script>alert("Product added to cart.");</script>'; // Optional: Show alert
+    } else {
+        echo '<script>alert("This product is already in your cart.");</script>'; // Optional: Show alert
+    }
+}
+?>
 
 <div class="container">
-    <h2>Shop Products</h2>
+    <h2>Product Grid</h2>
     <div class="grid gap">
         <?php
         $products = getAllProducts();
@@ -13,6 +29,10 @@
             echo '<figcaption>';
             echo '<div>' . $product['name'] . '</div>';
             echo '<div>$' . $product['price'] . '</div>';
+            echo '<form method="post" action="">'; // Changed action to current page
+            echo '<input type="hidden" name="product_id" value="' . $product['id'] . '">';
+            echo '<button type="submit" name="add_to_cart" class="w3-button w3-green">Add to Cart</button>';
+            echo '</form>';
             echo '</figcaption>';
             echo '</figure>';
             echo '</div>';

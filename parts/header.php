@@ -18,22 +18,23 @@
 
 <body>
 
-    <header class="navbar">
-        <div class="container display-flex">
-            <div class="flex-none">
-                <h1><a href="index.php">Home</a></h1>
-            </div>
-            <div class="flex-stretch"></div>
-            <nav class="flex-none nav">
-                <ul class="container display-flex">
-                    <li><a href="shop.php">Shop</a></li>
-                    <li><a href="cart.php">Cart</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="checkout.php">Checkout</a></li>
-                </ul>
-            </nav>
+<header class="navbar">
+    <div class="container display-flex">
+        <div class="flex-none">
+            <h1><a href="index.php">Home</a></h1>
         </div>
-    </header>
+        <div class="flex-stretch"></div>
+        <nav class="flex-none nav">
+            <ul class="container display-flex">
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="cart.php">Cart <?php echo isset($_SESSION['cart']) ? '(' . count($_SESSION['cart']) . ')' : '(0)' ?></a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="checkout.php">Checkout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 
 
     <main class="container py-4">
